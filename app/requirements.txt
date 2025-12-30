@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+python-multipart
+celery[redis]
+httpx
+pillow
+soundfile
+eventlet
+botocore

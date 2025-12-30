@@ -1,0 +1,1 @@
+python -m celery -A tasks worker -Q tts --loglevel=info --concurrency=2 -P eventlet

@@ -1,0 +1,11 @@
+version: "3.8"
+
+services:
+  tts-worker:
+    build: ./app
+    environment:
+      - BROKER_URL=redis://localhost:6379/0
+    command: celery -A tasks worker -Q tts --loglevel=info
+    volumes:
+      - ./app:/app
+      - ./temp:/app/temp
